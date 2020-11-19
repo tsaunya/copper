@@ -2,5 +2,6 @@
   "name": "[#624200]Copper",
   "author": "[white]test",
   "description": "[white]test",
-  "version": 0.1
+  "version": 0.1,
+  "minGameVersion": "105"
 }
