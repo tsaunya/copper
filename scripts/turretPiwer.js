@@ -16,12 +16,12 @@ const redLancerLaser = extend(BasicBulletType, {
         var f = Mathf.curve(b.fin(), 0, 0.2);
         var baseLen = length * f;
 
-                Lines.lineAngle(b.x, b.y, b.rot(), baseLen);
-                for(s = 0; s < 3; s++){
+                Lines.lineAngle(b.x, b.y, b.rotation(), baseLen);
+                for(var s = 0; s < 3; s++){
                     Draw.color(colors[s]);
-                    for(i = 0; i < tscales.length; i++){
+                    for(var i = 0; i < tscales.length; i++){
                         Lines.stroke(7 * b.fout() * (s == 0 ? 1.5 : s == 1 ? 1 : 0.3) * tscales[i]);
-                        Lines.lineAngle(b.x, b.y, b.rot(), baseLen * lenscales[i]);
+                        Lines.lineAngle(b.x, b.y, b.rotation(), baseLen * lenscales[i]);
                     }
                 }
                 Draw.reset();
@@ -31,9 +31,11 @@ const redLancerLaser = extend(BasicBulletType, {
     update(b){
         
         if(b.timer.get(18)){
-            
-        Damage.collideLine(b, b.getTeam(), Fx.lava, b.x, b.y, b.rot(), length);
-        
+            try {
+                Damage.collideLine(b, b.team, Fx.lava, b.x, b.y, b.rotation(), length);
+            } catch (error) {
+                throw(error);
+            }
         }
         
     },

@@ -16,8 +16,8 @@
 	"chargeBeginEffect": "none",
 	"shootSound": "spark",
 	"requirements": [
-		{ "item": "copper", "amount": 50 },
+		{ "item": "copper", "amount": 50 }
 	],
-	"category": "turret"
+	"category": "turret",
 	"research": "arc"
 }
