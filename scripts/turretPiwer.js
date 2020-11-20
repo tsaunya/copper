@@ -3,7 +3,7 @@ const EffLib = require("EffectsLib")
 const colors = [Pal.meltdownHit.cpy().mul(1, 0.6, 0.6, 0.4), Pal.meltdownHit, Color.red];
 const tscales = [1, 0.7, 0.5, 0.2];
 const lenscales = [1, 1.1, 1.13, 1.14];
-const length = 210;
+const length = 700;
 
 const redLancer  = extendContent(ChargeTurret, "turretPiwer", {
 });
